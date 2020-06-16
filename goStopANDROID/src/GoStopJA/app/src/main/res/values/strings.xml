@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Go Stop</string>
+    <string name="welcome_message">Welcome to Go Stop</string>
+    <string name="start_game">Start New Game</string>
+    <string name="load_game">Load Saved Game</string>
+    <string name="load_file">Enter the name of file to load:</string>
+    <string name="blank"></string>
+    <string name="layout_name">Layout</string>
+    <string name="system_log">System log messages will appear here...</string>
+    <string name="game_info">Game information will be displayed here.</string>
+    <string name="card">Card Image</string>
+    <string name="open_capture">Capture Pile</string>
+    <string name="open_hand">Hand pile</string>
+    <string name="stock_title">Top Card | Stockpile</string>
+    <string name="help_mode">Help Mode</string>
+    <string name="save_game">Save Game</string>
+    <string name="pass_turn">Pass Turn</string>
+    <string name="continue_turn">Continue</string>
+    <string name="copyright">© Salil Maharjan 2020</string>
+</resources>

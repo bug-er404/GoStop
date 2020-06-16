@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".controller.MainRoundActivity">
+
+    <TextView
+        android:id="@+id/firstPlayerAlertTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/blank"
+        android:textSize="25sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalguideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalguideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalguidelinePreBreak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalguidelineBreak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <HorizontalScrollView
+        android:id="@+id/userScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="@+id/verticalguidelinePreBreak"
+        app:layout_constraintStart_toStartOf="@+id/verticalguideline1"
+        app:layout_constraintTop_toBottomOf="@+id/userTitle">
+
+        <LinearLayout
+            android:id="@+id/userArea"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp">
+
+            <ImageButton
+                android:id="@+id/userCard1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/green_back" />
+
+            <ImageButton
+                android:id="@+id/userCard2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/green_back" />
+
+            <ImageButton
+                android:id="@+id/userCard3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/green_back" />
+
+            <ImageButton
+                android:id="@+id/userCard4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/green_back" />
+
+            <ImageButton
+                android:id="@+id/userCard5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/green_back" />
+
+            <ImageButton
+                android:id="@+id/userCard6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/green_back" />
+
+            <ImageButton
+                android:id="@+id/userCard7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/green_back" />
+
+            <ImageButton
+                android:id="@+id/userCard8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/green_back" />
+
+            <ImageButton
+                android:id="@+id/userCard9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/green_back" />
+
+            <ImageButton
+                android:id="@+id/userCard10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/green_back" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/mainInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/atma"
+        android:hint="@string/game_info"
+        android:text="@string/blank"
+        android:textColor="#F6F6F6"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/gameInfo"
+        app:layout_constraintEnd_toEndOf="@+id/verticalguideline2"
+        app:layout_constraintStart_toEndOf="@+id/verticalguidelineBreak"
+        app:layout_constraintTop_toBottomOf="@id/userTitle" />
+
+    <TextView
+        android:id="@+id/gameInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/atma"
+        android:hint="@string/game_info"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/helpMode"
+        app:layout_constraintEnd_toEndOf="@+id/verticalguideline2"
+        app:layout_constraintStart_toEndOf="@+id/verticalguidelineBreak"
+        app:layout_constraintTop_toBottomOf="@+id/mainInfo" />
+
+    <Button
+        android:id="@+id/userButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_dark"
+        android:bottomLeftRadius="25dp"
+        android:bottomRightRadius="25dp"
+        android:onClick="toggleUserPile"
+        android:padding="25dp"
+        android:text="@string/open_capture"
+        android:topLeftRadius="15dp"
+        android:topRightRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="@+id/verticalguidelineBreak"
+        app:layout_constraintStart_toStartOf="@+id/verticalguidelinePreBreak"
+        app:layout_constraintTop_toBottomOf="@+id/userTitle" />
+
+    <Switch
+        android:id="@+id/helpMode"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="2dp"
+        android:checked="true"
+        android:text="@string/help_mode"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="@id/verticalguideline2"
+        app:layout_constraintStart_toEndOf="@+id/verticalguidelineBreak"
+        app:layout_constraintTop_toBottomOf="@+id/gameInfo"
+        tools:checked="true" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/compScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="@id/verticalguidelinePreBreak"
+        app:layout_constraintStart_toStartOf="@id/verticalguideline1"
+        app:layout_constraintTop_toBottomOf="@+id/compTitle">
+
+        <LinearLayout
+            android:id="@+id/compArea"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp">
+
+
+            <ImageButton
+                android:id="@+id/compCard1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:clickable="false"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/blue_back" />
+
+            <ImageButton
+                android:id="@+id/compCard2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:clickable="false"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/blue_back" />
+
+            <ImageButton
+                android:id="@+id/compCard3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:clickable="false"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/blue_back" />
+
+            <ImageButton
+                android:id="@+id/compCard4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:clickable="false"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/blue_back" />
+
+            <ImageButton
+                android:id="@+id/compCard5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:clickable="false"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/blue_back" />
+
+            <ImageButton
+                android:id="@+id/compCard6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:clickable="false"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/blue_back" />
+
+            <ImageButton
+                android:id="@+id/compCard7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:clickable="false"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/blue_back" />
+
+            <ImageButton
+                android:id="@+id/compCard8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:clickable="false"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/blue_back" />
+
+            <ImageButton
+                android:id="@+id/compCard9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:clickable="false"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/blue_back" />
+
+            <ImageButton
+                android:id="@+id/compCard10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:clickable="false"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/blue_back" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/stockPileArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="@id/verticalguideline2"
+        app:layout_constraintStart_toStartOf="@id/verticalguidelineBreak"
+        app:layout_constraintTop_toBottomOf="@+id/compTitle">
+
+
+        <ImageButton
+            android:id="@+id/stockTopCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:clickable="false"
+            android:contentDescription="@string/card"
+            android:padding="9dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/red_back" />
+
+        <ImageButton
+            android:id="@+id/deck"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:clickable="false"
+            android:contentDescription="@string/card"
+            android:padding="9dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/red_back" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/compButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_light"
+        android:bottomLeftRadius="15dp"
+        android:bottomRightRadius="15dp"
+        android:onClick="toggleComputerPile"
+        android:padding="25dp"
+        android:text="@string/open_capture"
+        android:topLeftRadius="15dp"
+        android:topRightRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="@+id/verticalguidelineBreak"
+        app:layout_constraintStart_toStartOf="@+id/verticalguidelinePreBreak"
+        app:layout_constraintTop_toBottomOf="@+id/compTitle" />
+
+    <HorizontalScrollView
+        android:id="@+id/layoutScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="@+id/verticalguideline2"
+        app:layout_constraintStart_toStartOf="@+id/verticalguideline1"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTitle">
+
+        <LinearLayout
+            android:id="@+id/layoutArea"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp">
+
+            <ImageButton
+                android:id="@+id/layoutCard1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/purple_back" />
+
+            <ImageButton
+                android:id="@+id/layoutCard2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/purple_back" />
+
+            <ImageButton
+                android:id="@+id/layoutCard3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/purple_back" />
+
+            <ImageButton
+                android:id="@+id/layoutCard4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/purple_back" />
+
+            <ImageButton
+                android:id="@+id/layoutCard5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/purple_back" />
+
+            <ImageButton
+                android:id="@+id/layoutCard6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/purple_back" />
+
+            <ImageButton
+                android:id="@+id/layoutCard7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/purple_back" />
+
+            <ImageButton
+                android:id="@+id/layoutCard8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/card"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/purple_back" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/userTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/atma"
+        android:hint="@string/welcome_message"
+        android:text="@string/blank"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/verticalguideline1"
+        app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+    <TextView
+        android:id="@+id/compTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/atma"
+        android:hint="@string/welcome_message"
+        android:text="@string/blank"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/verticalguideline1"
+        app:layout_constraintTop_toBottomOf="@+id/userScroll" />
+
+    <TextView
+        android:id="@+id/stockpileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/atma"
+        android:hint="@string/welcome_message"
+        android:text="@string/stock_title"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/verticalguidelineBreak"
+        app:layout_constraintTop_toBottomOf="@+id/userScroll" />
+
+    <TextView
+        android:id="@+id/layoutTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/atma"
+        android:text="@string/layout_name"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/verticalguideline1"
+        app:layout_constraintTop_toBottomOf="@+id/compScroll" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="5dp"
+        android:scrollbarStyle="insideInset"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="@+id/verticalguidelineBreak"
+        app:layout_constraintStart_toStartOf="@+id/verticalguideline1"
+        app:layout_constraintTop_toTopOf="@+id/guideline4">
+
+        <TextView
+            android:id="@+id/systemLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/system_log"
+            android:singleLine="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="2dp"
+        android:onClick="saveGame"
+        android:text="@string/save_game"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="@id/verticalguideline2"
+        app:layout_constraintStart_toEndOf="@+id/changeTurn"
+        app:layout_constraintTop_toBottomOf="@+id/guideline5" />
+
+    <Button
+        android:id="@+id/changeTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="8dp"
+        android:padding="5dp"
+        android:text="@string/continue_turn"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="@id/verticalguidelineBreak"
+        app:layout_constraintStart_toEndOf="@+id/verticalguidelinePreBreak"
+        app:layout_constraintTop_toBottomOf="@+id/guideline5" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+Round: 6
+
+Computer:
+	Score: 11
+	Hand: 7S 7S 1S 5S 7D 4S 6D 1H QS 9S
+	Capture Pile:
+
+Human:
+	Score: 10
+	Hand: 7S 7S 1S 5S 7D 4S 6D 1H QS 9S
+	Capture Pile:
+
+Layout: QC QH QD QS XC 7C 9D 3H-3S-3S KD JC
+
+Stock Pile: 3D 4S 6H 9H 2D XD 5C XD 3C 4H 1D XH XH KD 9C KS 3H 5H KH 3C 7S 7S 1S 5S 7D 4S 6D 1H QS 9S QC 2H KC 6H 2D 6D JD 6S 8H 3D QD 7H 6S 1C 6C 5D 5H KH 1H 7C 5D 2H 1S 9H QH 9C XC 8C
+
+Next Player: Computer
